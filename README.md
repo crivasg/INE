@@ -1,5 +1,5 @@
 # INE
-Downloads and parse data from INE
+Downloads and parse data from INE using Python
 
 
 ## Requirements
@@ -9,7 +9,8 @@ Downloads and parse data from INE
 - tqdm
 
 
-## References:
+## References
+
 - https://computosrm2022.ine.mx/base-de-datos
 - https://realpython.com/python-zipfile/
 - https://pypi.org/project/tabulate/
