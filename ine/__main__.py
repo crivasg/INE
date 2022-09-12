@@ -61,6 +61,11 @@ def main():
         print(f'ERROR: local_filename not found', file=sys.stderr)
         print(f'1', file=sys.stderr)
         sys.exit(-1)
+        
+    read_and_store_data(local_filename)
+    print_summary_data()
+
+    print_state_summary()
 
 if __name__ == '__main__':
     main()
