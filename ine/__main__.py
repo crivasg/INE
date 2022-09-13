@@ -20,6 +20,7 @@ def _parse_and_download_ine_data():
 returns the local name (pathlib.Path) of the downloaded file.'''
     
     temp_folder = os.getenv('TEMP')
+    temp_folder = os.path.join(os.path.sep, os.path.expanduser('~'), 'Documents')
     url = ine.__url__
     
     data_url = request_json_url(url=url)
@@ -66,6 +67,9 @@ def main():
     print_summary_data()
 
     print_state_summary()
+    
+    if os.path.exists(local_filename):
+        os.remove(local_filename)
 
 if __name__ == '__main__':
     main()
