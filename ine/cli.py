@@ -8,10 +8,11 @@ def read_user_cli_args():
 
     parser = argparse.ArgumentParser(prog='ine',
                                      description='process the INE results from a zip file')
-    parser.add_argument('-f','--input-file',
-                        metavar='FILE',
-                        type=pathlib.Path,
-                        default=None,
-                        help='read INE results from a file')
+    
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-v", "--verbose", 
+                       action="store_true")
+    group.add_argument("-q", "--quiet", 
+                       action="store_true")
 
     return parser.parse_args()
