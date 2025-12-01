@@ -9,8 +9,6 @@ __epilog__ = 'that\'s it, folks...'
 __uuid__ = str(uuid.uuid4())
 __width__ = 82
 
-
-
 # creates the %APPDATA%\submit and %TEMP%\submit folder if not exist
 __appdata_folder__ = os.path.join(os.sep,os.getenv('APPDATA'),__prog_name__.lower())
 if not os.path.isdir(__appdata_folder__):
@@ -19,4 +17,3 @@ if not os.path.isdir(__appdata_folder__):
 __tmp_folder__ = os.path.join(os.sep,os.getenv('TEMP'),__prog_name__.lower())
 if not os.path.isdir(__tmp_folder__):
     os.makedirs(__tmp_folder__, exist_ok=True)
-
