@@ -5,7 +5,17 @@ import uuid
 
 __prog_name__ = 'ine'
 __author__  = 'Cesar A. Rivas'
-__version__ = '0.1.0'
+
+__version__ = '0.0.0'
+try:
+    with open(pathlib.Path(__file__).parent / "VERSION", encoding="utf-8") as f:
+        __version__ = f.read().strip()
+except IOError:
+    print('File not find')
+finally:
+    pass
+
+
 __desc__ = 'process the INE results from a zip file'
 __url__ = 'https://computosrm2022.ine.mx/assets/JSON/REVOCACION_MANDATO/NACIONAL/Revocacion_Mandato_NACIONAL.json'
 __epilog__ = 'that\'s it, folks...'
