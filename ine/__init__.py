@@ -10,11 +10,14 @@ __version__ = '0.0.0'
 try:
     with open(pathlib.Path(__file__).parent / "VERSION", encoding="utf-8") as f:
         __version__ = f.read().strip()
-except IOError:
-    print('File not find')
+except FileNotFoundError:
+    print(f'Error: The file \'VERSION\' was not found.')
+    print('Please check the file name and path.')
+except Exception as e:
+    # Handle any other potential exceptions that might occur
+    print(f'An unexpected error occurred: {e}')
 finally:
     pass
-
 
 __desc__ = 'process the INE results from a zip file'
 __url__ = 'https://computosrm2022.ine.mx/assets/JSON/REVOCACION_MANDATO/NACIONAL/Revocacion_Mandato_NACIONAL.json'
