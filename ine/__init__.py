@@ -2,6 +2,7 @@
 
 import os
 import uuid
+import pathlib
 
 __prog_name__ = 'ine'
 __author__  = 'Cesar A. Rivas'
