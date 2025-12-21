@@ -1,5 +1,8 @@
 '''__init__.py'''
 
+import os
+import uuid
+
 __prog_name__ = 'ine'
 __author__  = 'Cesar A. Rivas'
 __version__ = '0.1.0'
