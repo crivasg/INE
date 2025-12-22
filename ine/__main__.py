@@ -41,10 +41,10 @@ returns the local name (pathlib.Path) of the downloaded file.'''
         os.remove(local_file)
 
     print('-'*120)
-    print(path)
-    print(url)
-    print(new_url)
-    print(local_file)
+    print(f'{path=}')
+    print(f'{url=}')
+    print(f'{new_url=}')
+    print(f'{local_file=}')
     print('-'*120)
 
     local_file = download_file(url = new_url,
