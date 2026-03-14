@@ -6,8 +6,9 @@ import pathlib
 
 __prog_name__ = 'ine'
 __author__  = 'Cesar A. Rivas'
-
 __version__ = '0.0.0'
+
+# try to read the version from the file "VERSION"
 try:
     with open(pathlib.Path(__file__).parent / "VERSION", encoding="utf-8") as f:
         __version__ = f.read().strip()
