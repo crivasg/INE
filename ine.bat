@@ -26,7 +26,7 @@ if not exist "venv\Scripts\activate.bat" (
 )
 
 call venv\Scripts\activate.bat
-python -m ine
+python -m %~n0
 call venv\Scripts\deactivate.bat
 
 POPD
